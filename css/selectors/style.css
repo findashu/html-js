@@ -1,0 +1,28 @@
+* {
+    background-color:rgb(241, 153, 153);
+}
+
+/* typed selectors */
+p {
+    color:red;
+    font-size:22px;
+}
+
+p {
+    color:green;
+}
+
+/* class selectors */
+.myheading {
+    color:purple;
+}
+
+.bg-color {
+    background-color: grey;
+}
+/* ID selectors */
+
+#myhead {
+    color:yellow;
+}
+

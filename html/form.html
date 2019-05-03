@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms </title>
+</head>
+<body>
+    
+    <form action="/hello" method="GET">
+        
+        <label for="firstname">First Name : </label>
+        <input type="text" name="firstname" placeholder="Enter your Name" value="Jeff" required>
+
+        <br>
+
+        <label for="lastname">Last Name :</label>
+        <input type="text" name="lastname" >
+        <br>
+        Mobile: 
+
+        <input type="number" name="mobile">
+        <br>
+        Password:
+        <input type="password" name="pasword" required>
+        <br>
+        Email : 
+        <input type="email" name="email" id="">
+
+        <br>
+        Birth Date:
+
+        <input type="date" name="bday">
+
+        <br>
+        Description :
+        <textarea ></textarea>
+
+        <br>
+        Gender:
+
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br>
+
+
+        <input type="checkbox" name="singing" value="agreed" checked> Singing
+        <br>
+        <input type="checkbox" value="notagreed" name="dancing" > Dancing
+        <br>
+        <input type="checkbox" name="football" value="football"> Football
+
+        <br>
+        Country Code
+        <select name="country" >
+            <option value="false">Select Country</option>
+            <option value="91">India</option>
+            <option value="53">Sri Lanka</option>
+            <option value="0">Nepal</option>
+            <option value="2">China</option>
+        </select>
+
+        <br>
+        Upload Resume :
+        <input type="file" name="resume" >
+
+        <input type="hidden" name="hide" value="mysecretfield">
+        
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

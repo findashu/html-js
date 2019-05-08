@@ -1,0 +1,25 @@
+.firstdiv {
+    width: 200px;
+    height: 200px;
+    background: tomato;
+    padding:0 10px ;
+    margin: 20px;
+    border: 2px dashed black;
+}
+
+.seconddiv {
+    width: 220px;
+    height: 220px;
+    background: green;
+    margin:20px;
+}
+
+.para {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    background: yellow;
+    padding: 10px;
+    text-align: justify;
+    border: 1px solid green;
+}

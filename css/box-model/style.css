@@ -1,0 +1,13 @@
+.firstdiv {
+    background: yellow;
+    height: 200px;
+    width: 500px;
+}
+
+.seconddiv {
+    height: 100%;
+    width: 100%;
+    background: url(../../html/image/javascript.png);
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,11 @@
+.menu li {
+    background: palevioletred;
+    display: inline; /* block list item none */
+}
+
+.para {
+    background: green;
+    width: 200px;
+    height: 200px;
+    overflow: hidden; /* scroll auto */
+}

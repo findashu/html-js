@@ -16,11 +16,15 @@
     line-height: 26px;
     font-style: normal;
     font-variant: small-caps;
+    text-indent: 20px;
+    letter-spacing: 4px;
+    word-spacing: 4px;
 }
 
 .para3 {
     text-align:justify; /* center, left , right */
     text-decoration: line-through;
+
 }
 
 span {

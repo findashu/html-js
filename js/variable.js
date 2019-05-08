@@ -9,22 +9,29 @@ var _ = 30;
 
 // Representing a constant value
 
-var js ; // variable declaration;
-
-js = "hello "// variable assignment
-
-js = a;
-
-
-
-console.log(js);
-
-
-
-
 var PI = 3.14;
 var user_Name = 'Ashutosh';
 var userLastName = '';
+
+
+var js ; // variable declaration;
+
+console.log('declararion',js);
+
+js = "hello "// variable assignment
+
+console.log('assigned hello',js);
+
+js = a;
+
+console.log('assign a',js);
+
+
+nayana = 'Nayana S'
+
+console.log(nayana)
+
+console.log(bhamini)
 
 console.log(_)
 

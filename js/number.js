@@ -1,33 +1,47 @@
 
-// integer value
-var integerVal = 100000;
+//  integer value
+var int = 1400;
+console.log(int);
 
-// float 
-var floatVal = 10.006;
+// float value
+var floatValue = 10.5;
+console.log(floatValue)
 
-// octal
-var oct  = 0123; 
-console.log(oct);
 
-//hexa decimal
-var hexa = 0xfff;
-console.log(hexa);
+// octal value
+var octValue = 0234;
+console.log(octValue);
 
-// binary numbers
-var binaryNum = 0b0101;
-console.log(binaryNum);
+// hexdecimal
+var hexaValue = 0xfff;
+console.log(hexaValue);
 
-// Exponential 
 
-var exp = 2e+8;
-var expShort = 2e8;
+// binary value
+var binaryValue = 0b101010;
+console.log(binaryValue);
+
+
+console.log(typeof int)
+
+// exponential format
+var exp = 1e+10;
 console.log(exp);
 
+var myNum = 'a'*3;
 
-var foo = 10*'hello';
+console.log(myNum) //NaN
 
-console.log(typeof foo)
+console.log(typeof myNum)
 
-console.log(typeof integerVal);
 
-console.log(typeof floatVal);
+var division = 1/0;
+
+console.log(division) // Infinity
+
+console.log(typeof division)
+
+// Later on session
+var anotherWay = new Number(10);
+console.log(anotherWay);
+console.log(typeof anotherWay);

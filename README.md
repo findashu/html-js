@@ -1,15 +1,6 @@
 # Learning HTML and JS
 
-## Second Heading
-
 * HTML
-* CSS
+* CSS3 and Bootstrap
 * JavaScript
 
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```

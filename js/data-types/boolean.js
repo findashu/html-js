@@ -4,8 +4,9 @@ var b = false;
 
 console.log(a);
 
+// Falsy Value
 
-// Empty String var a = ''
+// Empty String ''
 // NaN
 // Undefined
 // Null

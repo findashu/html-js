@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Bg</title>
+</head>
+<body>
+    <p>Use in conjunction with the arrayFilters option to update all elements that match the arrayFilters conditions in the document or documents that match the query conditions. For example:Use in conjunction with the arrayFilters option to update all elements that match the arrayFilters conditions in the document or documents that match the query conditions. For example:</p>
+
+    <button>Change Background</button>
+
+    <script>
+    
+    function random (n) {
+        return Math.floor(Math.random() * n)
+    }
+
+    function generateAColor () {
+        return `rgb(${random(255)},${random(255)},${random(255)})`
+    }    
+    let btn = document.querySelector('button');
+
+    function buttonHandler () {
+        document.body.style.backgroundColor = generateAColor();
+    }
+
+    // apply event
+    btn.onclick = buttonHandler
+    
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>

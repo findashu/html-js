@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oh Noes</title>
+</head>
+<body>
+    <a href="https://www.kasandbox.org/programming-sounds/rpg/giant-no.mp3">What does Oh Noes say?</a>
+
+
+    <script>
+    
+    let anc = document.querySelector('a');
+    let aud = document.createElement('audio');
+
+    document.body.appendChild(aud);
+
+    function handler(e) {
+        e.preventDefault();
+        aud.src = anc.href;
+        // aud.controls = true;
+        aud.play();
+    }
+
+    anc.onclick = handler
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>

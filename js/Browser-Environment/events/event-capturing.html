@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div {
+            display: table-cell;
+            padding:30px;
+            border:1px solid black;
+            height : 300px;
+            width:300px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    
+
+    <div id="outerDiv">
+
+        <div id="innerDiv">
+
+
+            <button>Click Me</button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+    
+    let outer = document.getElementById('outerDiv')
+    let inner = document.getElementById('innerDiv')
+    let btn = document.querySelector('button')
+
+
+
+    outer.addEventListener('click', function(e) {
+        alert('outer')
+        outer.style.backgroundColor = 'red';
+    },true)
+
+    inner.addEventListener ('click', function(e) {
+        alert('inner')
+        inner.style.backgroundColor = 'green';
+    },true)
+
+    btn.addEventListener ('click', function(e) {
+        
+        e.stopPropagation()
+        alert('btn')
+        btn.style.backgroundColor = 'orange';
+    },true)
+    </script>
+
+
+</body>
+</html>

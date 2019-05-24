@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <p></p>
+        Name : <input type="text" name="name">
+
+        <br>
+
+
+        Email : <input type="text" name="email">
+
+        <br>
+
+        Password : <input type="password" name="pass">
+        <br>
+
+        <button>Submit</button>
+
+    </form>
+
+    <script>
+    
+    let frm = document.getElementById('myForm');
+
+
+    frm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let para = document.querySelector('p')
+        console.log('form submit');
+
+        // let inputs = document.querySelectorAll('input[type=text]')
+
+        // console.log(inputs)
+
+        // let name = frm[0].value;
+
+        // console.log(name);
+
+        let name = document.querySelector('input[name=name]').value;
+        let email = document.querySelector('input[name=email]').value
+
+        if(name == '') {
+            para.innerText = 'Name field is required'
+            para.style.color = 'red'
+        }
+        console.log(name);
+        console.log(email)
+    })
+    
+
+    let nameField = document.querySelector('input[name=name]');
+
+    let para = document.querySelector('p')
+    nameField.addEventListener('blur', function (e) {
+        let name = nameField.value;
+
+        if(name == '') {
+           nameField.style.borderColor = 'red'
+        }else {
+            nameField.style.borderColor = 'green'
+        }
+    })
+
+    let emailField = document.querySelector('input[name=email]');
+
+
+    emailField.addEventListener('focus', function() {
+        para.innerText = 'Please enter valid email'
+    })
+
+    
+    
+    </script>
+
+
+
+
+
+</body>
+</html>

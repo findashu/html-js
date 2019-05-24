@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Bubbling</title>
+</head>
+<body>
+    
+
+    <ul id="ultag">
+        <li id="fistLi"><a href="" id="firstA">Home</a></li>
+
+        <li><a href="">About</a></li>
+
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <script>
+    let ul = document.getElementById('ultag');
+    let li = document.getElementById('fistLi');
+    let anc = document.getElementById('firstA');
+
+
+    ul.addEventListener('click', function () {
+        alert('Ul Clicked')
+    })
+
+    li.addEventListener('click', function () {
+        alert('li Clicked')
+    })
+
+    anc.addEventListener('click', function (e) {
+        e.stopPropagation()
+        alert('anc Clicked')
+    })
+    
+    
+    
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Object</title>
+</head>
+<body>
+    
+    <a href="http://www.google.com">Google</a>
+
+
+
+    <script>
+        let a = document.querySelector('a');
+
+        document.body.onclick = function (e) {
+            console.log('X : '+ e.screenX)
+            console.log('y : '+ e.screenY)
+        }
+
+        document.onclick = function (e) {
+            console.log('X Document : '+ e.screenX)
+            console.log('Y Document: '+ e.screenY)
+        }
+        a.onclick = function(e) {
+            e.preventDefault();
+            console.log(e)
+            console.log(e.target)
+            console.log('Anchor Clicked')
+        }
+    
+    </script>
+
+
+</body>
+</html>

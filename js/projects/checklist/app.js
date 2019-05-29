@@ -8,21 +8,35 @@ function addItem(e) {
     e.preventDefault();
     let value = document.querySelector('input[type=text]').value;
     document.querySelector('input[type=text]').value = '';
-
-    items.push(value);
+    let data = {
+        value,
+        done:false
+    }
+    console.log(data)
+    items.push(data);
     populateList(items, todoList)
     localStorage.setItem('items', JSON.stringify(items))
 }
 
 function populateList(list, displayList) {
-    displayList.innerHTML = list.map(e => {
+    displayList.innerHTML = list.map((e, i) => {
         return `<li>
-                    <input type="checkbox" id="listItem">
-                    <label for="listItem">${e}</label>
+                    <input class="checkbox" data-index="${i}" id="items${i}"type="checkbox" ${e.done ? 'checked' : ''} id="listItem">
+                    <label for="listItem">${e.value}</label>
                 </li>`
     }).join('');
 }
 
+function toggle (e) {
+    if(!e.target.matches('input')) return;
+    let ele = e.target
+    let index = ele.dataset.index
+    items[index].done = !items[index].done
+    localStorage.setItem('items', JSON.stringify(items));
+    populateList(items, todoList)
+}
 
 populateList(items, todoList)
 addItemBtn.addEventListener('click', addItem);
+
+todoList.addEventListener('click',toggle)

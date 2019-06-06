@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background:cornflowerblue;
+}
+
+.main {
+    height: 100vh;
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+}
+
+img {
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+h2 {
+    padding:10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    width: 50%;
+    text-align: justify;
+    margin:0 auto;
+}

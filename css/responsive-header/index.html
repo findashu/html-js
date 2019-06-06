@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+
+        <ul class="topnav" id="head">
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">News</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li class="sidenav">
+                <a href="#">Signup</a>
+            </li>
+
+            <li class="sidenav">
+                <a href="#">Login</a>
+            </li>
+
+            <li class="side-menu">
+                <a id="sideMenu" href="#">&#9776;</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <script>
+        let sideMenu = document.getElementById('sideMenu');
+       
+        function displayMenu(e) {
+            e.preventDefault();
+            let ele = document.getElementById('head');
+
+            if(ele.className === 'topnav') {
+                ele.className += ' responsive'
+            }else {
+                ele.className = 'topnav'
+            }
+        }
+        
+        sideMenu.addEventListener('click',displayMenu)
+    </script>
+
+</body>
+</html>

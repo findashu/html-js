@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Position Properties 
+
+    Stattic default;
+    fixed
+    absolute
+    relative
+
+*/
+
+h1 {
+    background-color:lightseagreen;
+    color:white;
+    text-align: center;
+    padding:10px;
+}
+
+.boxes {
+    width:100%;
+    background-color:grey;
+    padding:20px;
+    text-align: center;
+   position: absolute;
+}
+
+.box {
+    width: 60%;
+    margin: 0 auto;
+    padding:25px;
+}
+
+.box1 {
+    background: green;
+}
+
+.box2 {
+    background: yellow;
+    position: absolute;
+    top:10px;
+    left:20px;
+}
+.box3 {
+    background: blue;
+}
+.box4 {
+    background: red;
+}
+
+.dummy {
+    text-align: center;
+    background: tomato;
+    height: 1000px;
+}

@@ -1,0 +1,32 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header {
+    background: lightgreen;
+    color:white;
+    height: 150px;
+    text-align: center;
+    padding:30px;
+}
+
+.column {
+    width: 50%;
+    float:left;
+    padding:20px;
+}
+
+
+@media all and (max-width:600px) {
+    .column {
+        width:100%
+    }
+}
+
+@media (min-width:400px) and (max-width:800px) {
+    header {
+        color:orange;
+    }   
+}

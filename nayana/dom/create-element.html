@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Hobbies</title>
+</head>
+<body>
+    <h1>Your Hobbies</h1>
+
+    
+
+    <script>
+        let hobbies = ['football', 'music', 'travelling'];
+
+        let ulEle = document.createElement('ul');
+        document.body.appendChild(ulEle)
+        
+        for(var i = 0; i< hobbies.length; i++) {
+
+            let liEle = document.createElement('li');
+
+            liEle.innerText = hobbies[i];
+            
+            ulEle.appendChild(liEle)
+        }
+
+    </script>
+</body>
+</html>

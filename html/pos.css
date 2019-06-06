@@ -1,0 +1,53 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color:royalblue;
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
+
+.boxes {
+    background: gray;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.box {
+    margin: 0 auto;
+    text-align:center;
+    padding: 40px;
+    width: 60%;
+    
+}
+
+.box1 {
+    background-color:red;
+}
+
+.box2 {
+    background-color:yellow;
+    position: absolute;
+    top:12px;
+    left: 30;
+}
+
+.box3 {
+    background-color:blue;
+}
+
+.box4 {
+    background-color:green;
+}
+
+.dummy{
+    height: 1000px;
+    background-color: antiquewhite;
+    text-align: center
+}

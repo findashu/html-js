@@ -1,53 +1,57 @@
-let random = Math.floor(Math.random() *100)
+let submitBtn = document.querySelector('.guessSubmit');
+let input = document.querySelector('.guessField');
 let guesses = document.querySelector('.guesses');
 let lastResult = document.querySelector('.lastResult');
 let lowOrHi = document.querySelector('.lowOrHi');
-let resultParas = document.querySelector('.resultParas');
-let submit = document.querySelector('.guessSubmit');
+let resultParas = document.querySelector('.resultParas')
+let resetButton = document.createElement('button');
+let randomNumber = Math.floor(Math.random() *100);
+let counter = 1
 
-let counter = 1;
-
-function checkGuess() {
-    let inputValue = Number(document.querySelector('#guessField').value);
+function guessResult(e) {
+    let usrInpt = Number(input.value);
     if(counter == 1) {
-        guesses.innerText += 'Previous Guess : ';
+        guesses.innerText = 'Previous Guesses :';
     }
-
-    guesses.innerText += ' '+inputValue;
-    if(counter >=10) {
-        lastResult.innerText = 'Game Over !';
-        lastResult.style.background = 'red';
-        let btn = document.createElement('button');
-        btn.innerText = 'Start New Game';
-        btn.addEventListener('click', startNewGame)
-        resultParas.appendChild(btn);
-        lowOrHi.innerText = ''
-    } else if(inputValue === random){
-        lastResult.innerText = 'Congratulations! You got the correct answer';
-        lastResult.style.background = 'green'
-        lowOrHi.innerText = ''
-    } else{
-        lastResult.innerText = 'Wrong!';
-        lastResult.style.background = 'red'
-        if(inputValue > random) {
-           lowOrHi.innerText = 'Your guess is too high';
-           counter++;
+    guesses.innerText += ' '+usrInpt;
+    if(randomNumber == usrInpt) {
+        lastResult.innerText = 'Your guess is correct'
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.innerText = '';
+        startGame()
+    }else if(counter === 10) {
+        lastResult.innerText = 'Game Over!';
+        lowOrHi.innerText = '';
+        startGame()
+    }else{
+        lastResult.innerText = 'Wrong'
+        lastResult.style.backgroundColor = 'red';
+        if(randomNumber > usrInpt) {
+            lowOrHi.innerText = 'Last guess is too low!';
         }else {
-           lowOrHi.innerText = 'Your guess is too low'
-           counter++
+            lowOrHi.innerText = 'Last guess is too high!';
         }
     }
-    document.querySelector('#guessField').value = '';
-    document.querySelector('#guessField').focus();
+    counter++;
+    input.value= '';
+    input.focus();
 }
 
-function startNewGame() {
-    random = Math.floor(Math.random() *100);
+function resetGame() {
+    randomNumber = Math.floor(Math.random() *100);
     counter = 1;
     lowOrHi.innerText = '';
     guesses.innerText = '';
     lastResult.innerText = '';
-    lastResult.style.background = 'white';
+    lastResult.style.backgroundColor = '';
+    resetButton.parentNode.removeChild(resetButton);
 }
 
-submit.onclick = checkGuess;
+
+function startGame(){
+    resetButton.innerText = 'Start Again';
+    resultParas.appendChild(resetButton);
+    resetButton.addEventListener('click', resetGame);
+}
+
+submitBtn.addEventListener('click', guessResult);

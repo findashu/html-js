@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capturing</title>
+
+    <style>
+    
+    div {
+        height:300px;
+        width: 300px;
+        display: table-cell;
+        border : 1px solid black;
+        padding: 20px;
+    }
+    
+    
+    </style>
+
+</head>
+<body>
+    
+    <div id="outerdiv">
+
+        <div id="innerdiv">
+
+            <button>Click Me</button>
+
+        </div>
+
+
+    </div>
+
+    <script>
+    
+    let outer = document.querySelector('#outerdiv');
+    let inner = document.querySelector('#innerdiv');
+    let btn = document.querySelector('button');
+    
+        outer.addEventListener('click', function() {
+            alert('Outer Div');
+        }, true);
+
+        inner.addEventListener('click', function() {
+            alert('Inner Div');
+        },  true);
+
+        btn.addEventListener('click', function(e) {
+            // stop bubbling
+            e.stopPropagation()
+            alert('btn clicked');
+        }, true);
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX DEMO</title>
+</head>
+<body>
+    <h1>Courses</h1>
+    <ul id="courseList"></ul>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+
+    <script>
+    let list = document.getElementById('courseList')
+    $.ajax({
+        url:'http://localhost:3005/v1/api/courses',
+        method: 'GET',
+        // data: while post
+        // content-type:'application/json'
+
+        success : function(data) {
+            console.log('success',data.data)
+
+            let html = data.data.map(e => {
+                return `<li>${e.name}</li>`
+            }).join('');
+            list.innerHTML= html
+        },
+
+        error: function(err) {
+            console.log('err',err)
+        }
+
+    })
+    
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

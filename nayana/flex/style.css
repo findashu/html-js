@@ -1,0 +1,35 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.container {
+    width: 100%;
+    background:grey;
+    display:flex;
+    flex-wrap: wrap-reverse;
+    flex-flow: row; 
+}
+
+.box {
+    min-width: 400px; 
+    height: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.one {
+    background:orange;
+    /* flex-grow: 1;
+    flex-shrink: 3; */
+}
+
+.two {
+    background:white;
+}
+
+.three {
+    background:green;
+    /* flex-grow: 1;
+    flex-shrink: 1; */
+}

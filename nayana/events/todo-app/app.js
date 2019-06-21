@@ -14,7 +14,6 @@ function addItem(e) {
     populateList(items)
 }
 
-
 function populateList(list) {
     let html = list.map((e,i) => {
         return `
@@ -25,16 +24,12 @@ function populateList(list) {
     itemList.innerHTML = html
 } 
 
-
 function toggleCheckList(e) {
     if(!e.target.matches('input')) return;
-    let ele = e.target
-
+    let ele = e.target;
     let index = ele.dataset.id;
     items[index].done = !items[index].done;
-
     localStorage.setItem('items',JSON.stringify(items))
-    
     populateList(items)
 }
 
